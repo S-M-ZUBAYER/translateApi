@@ -54,7 +54,7 @@ app.use(express.json());
 app.post('/translate', async (req, res) => {
     try {
         const { target, text } = req.body;
-        console.log(target, text);
+        // console.log(target, text);
         if (!text || !target) {
             return res.status(400).json({ error: "please filled you data" });
         }
@@ -63,13 +63,13 @@ app.post('/translate', async (req, res) => {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: prompt,
-            temperature: 0.3,
-            max_tokens: 4000,
+            temperature: 0.0,
+            max_tokens: 1000,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
         });
-        // console.log("response",response.data.choices[0])
+        console.log("response",response.data.choices[0])
         if (response) {
             res.status(200).json({ data: response.data.choices[0].text.trim() });
         } else {
@@ -93,8 +93,8 @@ app.post('/translateEng', async (req, res) => {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: prompt,
-            temperature: 0.3,
-            max_tokens: 4000,
+            temperature: 0.0,
+            max_tokens: 1000,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
