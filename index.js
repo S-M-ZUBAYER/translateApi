@@ -63,11 +63,11 @@ app.post('/translate', async (req, res) => {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: prompt,
-            temperature: 0.0,
-            max_tokens: 1000,
-            top_p: 1.0,
-            frequency_penalty: 0.0,
-            presence_penalty: 0.0,
+            temperature: 0.3,
+            max_tokens: 984,
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0,
         });
         console.log("response",response.data.choices[0])
         if (response) {
@@ -93,11 +93,11 @@ app.post('/translateEng', async (req, res) => {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: prompt,
-            temperature: 0.0,
-            max_tokens: 1000,
-            top_p: 1.0,
-            frequency_penalty: 0.0,
-            presence_penalty: 0.0,
+            temperature: 0.3,
+            max_tokens: 984,
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0,
         });
         // console.log("response",response.data.choices[0])
         if (response) {
