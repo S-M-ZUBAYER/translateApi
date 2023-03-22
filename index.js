@@ -145,10 +145,10 @@ app.post('/translateEng', async (req, res) => {
 
 
 app.get('/', async (req, res) => {
-    res.send('Cricket lover server is running');
+    res.send('ZUSS Translator server is running');
 });
 
-app.listen(port, () => console.log(`Cricket lover is running on ${port}`))
+app.listen(port, () => console.log(`ZUSS Translator is running on ${port}`))
 
 
 
