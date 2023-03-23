@@ -20,7 +20,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Define translation route
+
 // app.post('/translate', async (req, res) => {
 //     try {
 //       // Get text to translate and model to use from request parameters
